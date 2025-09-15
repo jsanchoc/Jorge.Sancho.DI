@@ -18,13 +18,16 @@ public class Entrada {
     // fun main(args:Array<String>){}
     public static void main(String[] args){
 
-        Scanner lecturaTeclado = new Scanner(System.in);
+        /*Scanner lecturaTeclado = new Scanner(System.in);
         System.out.println("Por favor introduce tu nombre");
         String nombre = lecturaTeclado.next();
         System.out.println("Por favor introduce tu edad");
         int edad = lecturaTeclado.nextInt();
         System.out.println("Primer programa en Java");
         System.out.printf("Mi nombre es %s y tengo %d\n",nombre,edad);
+         */
+        SentenciasControl sentencias = new SentenciasControl();
+        sentencias.sentenciasRepeticion();
 
     }
 
