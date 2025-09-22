@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Entrada {
     /*
     // variables
@@ -25,9 +23,23 @@ public class Entrada {
         int edad = lecturaTeclado.nextInt();
         System.out.println("Primer programa en Java");
         System.out.printf("Mi nombre es %s y tengo %d\n",nombre,edad);
-         */
+
         SentenciasControl sentencias = new SentenciasControl();
         sentencias.sentenciasRepeticion();
+         */
+        EstructurasArrays esctructurasArrays = new EstructurasArrays();
+        // esctructurasArrays.incluirNumero(3,7);
+        // esctructurasArrays.mostrarElementos();
+        // esctructurasArrays.buscarRepetidos(7);
+        /*if (esctructurasArrays.estaNumero(7)){
+            System.out.println("El numero está en el array");
+        } else {
+            System.out.println("El numero NO está en el array");
+        }
+         */
+        esctructurasArrays.rellenarArray();
+        esctructurasArrays.mostrarElementos();
+        esctructurasArrays.realizarCalculos();
 
     }
 
