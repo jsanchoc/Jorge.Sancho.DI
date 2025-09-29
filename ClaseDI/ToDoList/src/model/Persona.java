@@ -47,4 +47,11 @@ public class Persona {
     public void setEdad(int edad) {
         this.edad = edad;
     }
+
+    public void mostrarDatos(){
+        System.out.println("nombre = " + nombre);
+        System.out.println("\tapellido = " + apellido);
+        System.out.println("\tedad = " + edad);
+        System.out.println("\tdni = " + dni);
+    }
 }

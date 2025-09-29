@@ -1,46 +1,108 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.Objects;
+
 public class Tarea {
 
     // variables
     private int id, horasEmpleadas;
-
     private String titulo, descripcion;
-
+    private Persona responsable;
+    private Persona[] equipoTrabajo;
     private boolean completada;
+
+    private ArrayList<>
+
+    // constructores -> el vacio (desaparece cuando se escribe uno)
 
 
     public Tarea() {
+
     }
 
-    // constructores -> el vacio (desaparece cuando se escribe uno)
-    public Tarea(int id, String titulo, String descripcion){
-        this.id = 1;
-        this.titulo = titulo;
-        this.descripcion = descripcion;
-        // completada = false;
-    }
-
-    public Tarea(int id, int horasEmpleadas, String titulo, String descripcion) {
+    public Tarea(int id, String titulo, String descripcion, Persona responsable) {
         this.id = id;
         this.titulo = titulo;
         this.descripcion = descripcion;
+        this.responsable = responsable;
+        equipoTrabajo = new Persona[4];
+        encargos = new ArrayList<>();
+    }
+
+    public Tarea(int id, String titulo, String descripcion, Persona responsable,int horasEmpleadas) {
+        this.id = id;
+        this.horasEmpleadas = horasEmpleadas;
+        this.titulo = titulo;
+        this.descripcion = descripcion;
+        this.responsable = responsable;
+        equipoTrabajo = new Persona[4];
+        encargos = new ArrayList<>();
+    }
+
+    public Persona[] getEquipoTrabajo() {
+        return equipoTrabajo;
+    }
+
+
+
+    public void setEquipoTrabajo(Persona[] equipoTrabajo) {
+        this.equipoTrabajo = equipoTrabajo;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public Persona getResponsable() {
+        return responsable;
+    }
+
+    public void setResponsable(Persona responsable) {
+        this.responsable = responsable;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getHorasEmpleadas() {
+        return horasEmpleadas;
+    }
+
+    public void setHorasEmpleadas(int horasEmpleadas) {
         this.horasEmpleadas = horasEmpleadas;
     }
 
-    // metodos -> getter setter
-    public void setTitulo(String titulo){
-        if (titulo.length() < 5){
-            this.titulo = titulo;
-        }
-        System.out.println("NO noseq");
-    }
-
-    public String getTitulo(int pin){
-        if (pin == 1234){
+    public String getTitulo(int pin) {
+        if (pin == 1234) {
             return titulo;
         }
         return null;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public boolean isCompletada() {
+        return completada;
+    }
+
+    public void setCompletada(boolean completada) {
+        this.completada = completada;
     }
 
     @Override
@@ -53,6 +115,68 @@ public class Tarea {
                 ", completada=" + completada +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Tarea tarea)) return false;
+        return getId() == tarea.getId() && getHorasEmpleadas() == tarea.getHorasEmpleadas();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getHorasEmpleadas());
+    }
+
+
+    public void agragarPersona(Persona persona){
+        Persona estaPersona = estaPersona(persona.getDni());
+        for (int i = 0; i < equipoTrabajo.length; i++) {
+            if (equipoTrabajo[i]==null){
+                equipoTrabajo[i]=persona;
+                System.out.printf("Agregado correctamente la persona %s", persona.getNombre());
+                System.out.println();
+                return;
+            }
+        }
+        System.out.println("No se ha podido agregar.");
+    }
+
+    private Persona estaPersona(String dni){
+
+        for (int i = 0; i < equipoTrabajo.length; i++) {
+            if (equipoTrabajo[i]!=null && equipoTrabajo[i].getDni().equalsIgnoreCase(dni)){
+                return equipoTrabajo[i];
+            }
+        }
+        return null;
+    }
+
+    public void mostrarPersona(){
+        for (Persona persona : equipoTrabajo) {
+            if (persona != null){
+                persona.mostrarDatos();
+            }
+        }
+    }
 }
+
+
+// crear una clase llamada persona que tenga los
+// atributos de: nombre, apellido, dni y edad
+// Todos los atributos serán necesarios
+
+// quiero que una tarea tenga un responsable asignado
+// es imposible crear una tarea si no tiene responsable
+
+// una tarea tiene hueco para 4 personas del equipo
+// inicialmente la tarea no tiene personas en el equipo asignadas
+
+// Agregar una persona al equipo de trabajo
+// Si no tengo hueco, saltara un aviso
+// Si intento agregar una persona al equipo de
+// trabajo con un DNI ya existente
+// saltará un aviso
+// en caso de agregar saltar un aviso de todo OK
 
 
