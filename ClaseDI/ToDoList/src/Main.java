@@ -1,3 +1,5 @@
+
+import model.Encargo;
 import model.Persona;
 import model.Tarea;
 
@@ -32,14 +34,22 @@ public class Main {
         Tarea tarea = new Tarea(3, "Practicar", "descipcion de la tarea",
                 new Persona("2345C", "Juan", "Garcia", 26),
                 5);
+        // cuantas personas entran en esta tarea
         System.out.println(tarea.getEquipoTrabajo().length);
-        tarea.agragarPersona(new Persona("Jorge", "11123k", "sancho", 23));
-        tarea.agragarPersona(new Persona("Javier", "3333k", "pancho", 33));
-        tarea.agragarPersona(new Persona("Pepe", "11823k", "saycho", 13));
-        tarea.agragarPersona(new Persona("borjita", "98765E", "calbo", 99));
-        tarea.agragarPersona(new Persona("Steve", "0987654j", "mulroy", 18));
-
-        tarea.mostrarPersona();
+        // tarea.agregarPersonaEquipo(new Persona("1","Borja","Martin",41));
+        // tarea.agregarPersonaEquipo(new Persona("2","Juan1","Martin",41));
+        // tarea.agregarPersonaEquipo(new Persona("3","Juan2","Martin",41));
+        // tarea.agregarPersonaEquipo(new Persona("4","Juan3","Martin",41));
+        // tarea.eliminarPersona("4");
+        // tarea.agregarPersonaEquipo(new Persona("5","Juan4","Martin",41));
+        // tarea.agregarPersonaEquipo(new Persona("3","Marcos","Martin",41));
+        //tarea.agregarPersonaEquipo(new Persona("4","Luis","Martin",41));
+        //tarea.agregarPersonaEquipo(new Persona("5","Lucas","Martin",41));
+        // tarea.mostrarEquipoTrabajo();
+        tarea.agregarEncargo(new Encargo(1, "Comer patatas."));
+        tarea.agregarEncargo(new Encargo(2, "Comer patatas."));
+        tarea.mostrarEncargos();
+        tarea.mostrarEncargo(2);
 
     }
 }

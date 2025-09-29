@@ -1,25 +1,26 @@
+
 package model;
 
-public class Encargo{
+import java.util.Comparator;
+
+public class Encargo {
 
     private int id;
     private String titulo;
-    private boolean completo;
+    private boolean realizado;
 
     public Encargo() {
     }
 
-    public Encargo(int id, String titulo){
+    public Encargo(int id, String titulo) {
         this.id = id;
         this.titulo = titulo;
+        // realizado = false;
     }
 
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public void mostrarDatos(){
+        System.out.println("id = " + id);
+        System.out.println("\tEncargo = " + titulo);
     }
 
     public int getId() {
@@ -30,11 +31,22 @@ public class Encargo{
         this.id = id;
     }
 
-    public boolean isCompleto() {
-        return completo;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public void setCompleto(boolean completo) {
-        this.completo = completo;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
+
+    public boolean isRealizado() {
+        return realizado;
+    }
+
+    public void setRealizado(boolean realizado) {
+        this.realizado = realizado;
+    }
+
+
+
 }

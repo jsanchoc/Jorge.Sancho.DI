@@ -1,27 +1,18 @@
+
 package model;
 
 public class Persona {
-
-    private String nombre, apellido, dni;
-
+    private String dni, nombre, apellido;
     private int edad;
 
     public Persona() {
     }
 
-    public Persona(String nombre, String dni, String apellido, int edad) {
-        this.nombre = nombre;
+    public Persona(String dni, String nombre, String apellido, int edad) {
         this.dni = dni;
+        this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 
     public String getDni() {
@@ -30,6 +21,14 @@ public class Persona {
 
     public void setDni(String dni) {
         this.dni = dni;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getApellido() {
@@ -50,8 +49,18 @@ public class Persona {
 
     public void mostrarDatos(){
         System.out.println("nombre = " + nombre);
+        System.out.println("\tdni = " + dni);
         System.out.println("\tapellido = " + apellido);
         System.out.println("\tedad = " + edad);
-        System.out.println("\tdni = " + dni);
+    }
+
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "dni='" + dni + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", edad=" + edad +
+                '}';
     }
 }
