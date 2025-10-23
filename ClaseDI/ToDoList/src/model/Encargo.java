@@ -1,42 +1,16 @@
-
 package model;
 
-import java.util.Comparator;
+public class Encargo extends Tarea {
 
-public class Encargo {
-
-    private int id;
-    private String titulo;
     private boolean realizado;
 
     public Encargo() {
+        super();
     }
 
-    public Encargo(int id, String titulo) {
-        this.id = id;
-        this.titulo = titulo;
-        // realizado = false;
-    }
-
-    public void mostrarDatos(){
-        System.out.println("id = " + id);
-        System.out.println("\tEncargo = " + titulo);
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public Encargo(int id, String titulo, String descripcion, Persona responsable, boolean realizado) {
+        super(id, titulo, descripcion, responsable);
+        this.realizado = realizado;
     }
 
     public boolean isRealizado() {
@@ -47,6 +21,28 @@ public class Encargo {
         this.realizado = realizado;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + ", realizado=" + realizado + "}";
+    }
 
+    @Override
+    public void agregarEncargo(Encargo encargo) {
+        super.agregarEncargo(encargo);
+    }
 
+    @Override
+    public void mostrarEncargos() {
+        super.mostrarEncargos();
+    }
+
+    @Override
+    public void eliminarEncargo(int id) {
+        super.eliminarEncargo(id);
+    }
+
+    @Override
+    public void completarEncargo(int id) {
+        super.completarEncargo(id);
+    }
 }

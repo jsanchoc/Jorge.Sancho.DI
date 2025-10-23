@@ -2,54 +2,38 @@
 import model.Encargo;
 import model.Persona;
 import model.Tarea;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        /*
-        Tarea tareaPrincipal = new Tarea();
-        Tarea tareaSecundaria = new Tarea(1, "Estudiar", "Esta tarea me ayudara a centrarme en el dia a dia del estucio",
-                new Persona("1234A", "Borja", "Martin", 41));
-        Tarea tareaSecundaria2 = new Tarea(3, "Practicar", "descipcion de la tarea",
-                new Persona("2345C", "Juan", "Garcia", 26),
-                5);
+        Persona persona = new Persona("1234567E", "Jorge", "Sancho", 23);
+        Encargo encargo = new Encargo(1, "Eat Healthy", "Vas a comer sano durante 3 meses", persona, false);
 
+        Scanner sc = new Scanner(System.in);
+        int option = 0;
+        while (option != 5) {
+            System.out.println("**********MENU**********");
+            System.out.println("*1. Añadir Encargo     *");
+            System.out.println("*2. Ver Encargo        *");
+            System.out.println("*3. Completar Encargo  *");
+            System.out.println("*4. Eliminar Encargo   *");
+            System.out.println("*5. Salir              *");
+            System.out.println("************************");
+            System.out.println("Elije una opción: ");
 
-        // como saco el nombre del respoonsable de la tarea secundaria
-        System.out.println(tareaSecundaria.getResponsable().getNombre());
-
-
-        // cuantas personas hay en el equipo de trabajo de la tarea secundaria
-        Persona personaVacia = new Persona();
-        Persona persona = new Persona("1234A", "Borja", "Martin", 41);
-        System.out.println(tareaPrincipal);
-        System.out.println(tareaSecundaria);
-        System.out.println(tareaPrincipal.equals(tareaSecundaria));
-
-        System.out.println(personaVacia);
-        System.out.println(persona);
-        // tareaSecundaria.setTitulo("Estu");
-        // System.out.println(tareaSecundaria.getTitulo(1234));
-
-         */
-        Tarea tarea = new Tarea(3, "Practicar", "descipcion de la tarea",
-                new Persona("2345C", "Juan", "Garcia", 26),
-                5);
-        // cuantas personas entran en esta tarea
-        System.out.println(tarea.getEquipoTrabajo().length);
-        // tarea.agregarPersonaEquipo(new Persona("1","Borja","Martin",41));
-        // tarea.agregarPersonaEquipo(new Persona("2","Juan1","Martin",41));
-        // tarea.agregarPersonaEquipo(new Persona("3","Juan2","Martin",41));
-        // tarea.agregarPersonaEquipo(new Persona("4","Juan3","Martin",41));
-        // tarea.eliminarPersona("4");
-        // tarea.agregarPersonaEquipo(new Persona("5","Juan4","Martin",41));
-        // tarea.agregarPersonaEquipo(new Persona("3","Marcos","Martin",41));
-        //tarea.agregarPersonaEquipo(new Persona("4","Luis","Martin",41));
-        //tarea.agregarPersonaEquipo(new Persona("5","Lucas","Martin",41));
-        // tarea.mostrarEquipoTrabajo();
-        tarea.agregarEncargo(new Encargo(1, "Comer patatas."));
-        tarea.agregarEncargo(new Encargo(2, "Comer patatas."));
-        tarea.mostrarEncargos();
-        tarea.mostrarEncargo(2);
-
+            option = sc.nextInt();
+            switch (option) {
+                case 1:
+                    encargo.agregarEncargo(encargo);
+                case 2:
+                    encargo.mostrarEncargo(1);
+                case 3:
+                    encargo.completarEncargo(1);
+                case 4:
+                    encargo.eliminarEncargo(1);
+                case 5:
+                    break;
+            }
+        }
     }
 }
