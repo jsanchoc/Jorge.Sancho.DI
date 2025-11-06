@@ -10,6 +10,7 @@ module org.example.formularioapp {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires lombok;
 
     opens org.example.formularioapp to javafx.fxml;
     exports org.example.formularioapp;
