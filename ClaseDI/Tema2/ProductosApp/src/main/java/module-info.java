@@ -1,4 +1,4 @@
-module org.example.calculadora {
+module org.example.productosapp {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -10,10 +10,10 @@ module org.example.calculadora {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
-    requires java.scripting;
-    requires java.desktop;
+    requires static lombok;
 
-    opens org.example.calculadora to javafx.fxml;
-    exports org.example.calculadora;
-    opens org.example.calculadora.controller to javafx.fxml;
+    opens org.example.productosapp.controller to javafx.fxml;
+    exports org.example.productosapp;
+    exports org.example.productosapp.model;
+    opens org.example.productosapp.model to javafx.fxml;
 }
