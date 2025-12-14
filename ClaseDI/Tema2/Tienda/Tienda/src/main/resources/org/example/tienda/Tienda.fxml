@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.TiendaController">
+   <padding>
+      <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+   </padding>
+   <left>
+      <ListView fx:id="listaProductos" prefHeight="200.0" prefWidth="375.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Label fx:id="lblTotal" text="Total en carrito: 0 productos" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="275.0" />
+         </BorderPane.margin>
+      </Label>
+   </right>
+   <bottom>
+      <HBox prefHeight="30.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+         <children>
+            <Button fx:id="btnComprar" mnemonicParsing="false" onAction="#handleComprar" text="Comprar">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnVaciar" mnemonicParsing="false" onAction="#handleVaciar" text="Vaciar Carrito">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnVer" mnemonicParsing="false" onAction="#handleVer" text="Ver Carrito">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
