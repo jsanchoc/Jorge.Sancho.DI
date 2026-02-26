@@ -1,0 +1,21 @@
+<main class="container mt-4">
+  <input
+    class="form-control mb-3"
+    placeholder="introduce el hobbie"
+    type="text"
+    [(ngModel)]="nombre"
+  />
+  <input
+    class="form-control mb-3"
+    placeholder="introduce el nivel"
+    type="number"
+    [(ngModel)]="nivel"
+  />
+  <input
+    class="form-control mb-3"
+    placeholder="introduce la fecha"
+    type="date"
+    [(ngModel)]="fecha"
+  />
+  <button class="btn btn-primary mb-3 w-100" (click)="guardarEnLista()">Guardar en Lista</button>
+</main>

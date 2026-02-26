@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>App Senderismo</title>
+  </head>
+  <body>
+    <div class="container">
+        <h1 style="margin: 10px">App Senderismo</h1>
+        <div class="row">
+            <div class="col" style="margin: 10px;">
+            <h2>Formulario</h2>
+            <input
+                id="input-nombre-ruta"
+                placeholder="Introduce el nombre de la ruta"
+                type="text"
+                class="form-control mt-4"
+            />
+            <input
+                id="input-distancia"
+                placeholder="Introduce los KM de la ruta"
+                type="number"
+                class="form-control mt-4"
+            />
+            </br>
+            <select id="select-dificultad" class="form-select">
+                <option value="Fácil">Fácil</option>
+                <option value="Moderada">Moderada</option>
+                <option value="Dificil">Dificil</option>
+            </select>
+            </div>
+            <div class="mt-4" style="margin: 10px;">
+                <button class="btn btn-primary" id="btn-añadir">Añadir Ruta</button>
+            </div>
+            <div class="mt-4" style="margin: 10px;">
+                <h3>Lista de Rutas</h3>
+                <ul id="listaRutas" class="list-group">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="./utils/js/senderismo.js"></script>
+  </body>
+</html>
