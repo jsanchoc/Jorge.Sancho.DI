@@ -27,6 +27,7 @@
     "@angular/common": "^21.1.0",
     "@angular/compiler": "^21.1.0",
     "@angular/core": "^21.1.0",
+    "@angular/fire": "^20.0.1",
     "@angular/forms": "^21.1.0",
     "@angular/platform-browser": "^21.1.0",
     "@angular/platform-server": "^21.1.0",
@@ -35,13 +36,13 @@
     "express": "^5.1.0",
     "firebase": "^12.9.0",
     "rxjs": "~7.8.0",
+    "sweetalert2": "^11.26.20",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
     "@angular/build": "^21.1.2",
     "@angular/cli": "^21.1.2",
     "@angular/compiler-cli": "^21.1.0",
-    "@angular/fire": "^0.0.0",
     "@types/express": "^5.0.1",
     "@types/node": "^20.17.19",
     "typescript": "~5.9.2"

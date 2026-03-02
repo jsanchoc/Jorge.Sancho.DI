@@ -1,0 +1,51 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-5">
+      <div class="card shadow">
+        <div class="card-body p-5">
+          <h3 class="card-title text-center mb-4">
+            {{ isRegistro ? 'Crear Cuenta' : 'Iniciar Sesión' }}
+          </h3>
+
+          <input
+            type="email"
+            class="form-control mb-3"
+            placeholder="Correo electrónico"
+            [(ngModel)]="email"
+          />
+          <input
+            type="password"
+            class="form-control mb-4"
+            placeholder="Contraseña"
+            [(ngModel)]="pass"
+          />
+
+          <button class="btn btn-primary w-100 mb-3" (click)="procesarFormulario()">
+            {{ isRegistro ? 'Registrarse' : 'Entrar' }}
+          </button>
+
+          <div class="text-center mt-3">
+            <a
+              href="javascript:void(0)"
+              class="text-primary text-decoration-none"
+              (click)="recuperarContrasena()"
+            >
+              ¿Has olvidado tu contraseña?
+            </a>
+          </div>
+
+          <p class="text-center mt-3">
+            {{ isRegistro ? '¿Ya tienes cuenta?' : '¿No tienes cuenta?' }}
+            <a
+              href="javascript:void(0)"
+              (click)="isRegistro = !isRegistro"
+              class="text-decoration-none fw-bold"
+            >
+              {{ isRegistro ? 'Inicia sesión aquí' : 'Regístrate gratis' }}
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

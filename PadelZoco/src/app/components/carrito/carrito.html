@@ -1,0 +1,75 @@
+<div class="container mt-4">
+  <h2 class="mb-4 fw-bold">🛒 Tu Cesta</h2>
+
+  <div class="row">
+    <div class="col-md-8">
+      <div class="list-group shadow-sm">
+        @for (item of items; track item.id_en_carrito) {
+          <div class="list-group-item p-3">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-center" style="width: 50%">
+                <img
+                  [src]="item.imagen"
+                  style="width: 60px; height: 60px; object-fit: contain"
+                  class="me-3 rounded"
+                />
+                <div>
+                  <h6 class="mb-0 fw-bold">{{ item.nombre }}</h6>
+                  <small class="text-muted">{{ item.precio }}€ / ud</small>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center">
+                <button class="btn btn-sm btn-outline-secondary px-2" (click)="disminuir(item)">
+                  -
+                </button>
+                <span class="mx-3 fw-bold">{{ item.cantidad || 1 }}</span>
+                <button class="btn btn-sm btn-outline-secondary px-2" (click)="aumentar(item)">
+                  +
+                </button>
+              </div>
+
+              <div class="text-end" style="width: 20%">
+                <span class="fw-bold d-block">{{ item.precio * (item.cantidad || 1) }}€</span>
+                <button class="btn btn-sm btn-danger mt-1" (click)="eliminar(item)">
+                  Eliminar
+                </button>
+              </div>
+            </div>
+          </div>
+        } @empty {
+          <div class="p-5 text-center bg-light border rounded">
+            <h5 class="text-muted mb-3">Tu carrito está muy vacío</h5>
+            <a href="/tienda" class="btn btn-primary">Volver a la tienda</a>
+          </div>
+        }
+      </div>
+    </div>
+
+    @if (items.length > 0) {
+      <div class="col-md-4 mt-4 mt-md-0">
+        <div class="card shadow-sm border-0 bg-light">
+          <div class="card-body">
+            <h5 class="card-title mb-4 fw-bold">Resumen del pedido</h5>
+            <div class="d-flex justify-content-between mb-3 text-muted">
+              <span>Subtotal ({{ items.length }} productos)</span>
+              <span>{{ total }}€</span>
+            </div>
+            <div class="d-flex justify-content-between mb-3 text-muted">
+              <span>Gastos de envío</span>
+              <span class="text-success">Gratis</span>
+            </div>
+            <hr />
+            <div class="d-flex justify-content-between mb-4">
+              <span class="h5 fw-bold mb-0">Total</span>
+              <span class="h4 text-primary fw-bold mb-0">{{ total }}€</span>
+            </div>
+            <button class="btn btn-success w-100 p-3 fw-bold" (click)="finalizarCompra()">
+              TRAMITAR PEDIDO
+            </button>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

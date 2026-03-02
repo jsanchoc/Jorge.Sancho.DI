@@ -1,0 +1,14 @@
+{
+  "productos": {
+    "p01": { "nombre": "Bullpadel Neuron 2025", "categoria": "Palas", "precio": 290, "stock": 10, "descripcion": "La pala de Federico Chingotto. Control puro.", "imagen": "https://www.bullpadel.com/14778-large_default/pala-bullpadel-neuron-25.jpg" },
+    "p02": { "nombre": "Nox AT10 Genius 12K", "categoria": "Palas", "precio": 250, "stock": 5, "descripcion": "La pala de Agustín Tapia. Control total.", "imagen": "https://www.padelnuestro.com/media/catalog/product/1/2/120968-pala-nox-at10-genius-12k-alum-xtreme-by-agustin-tapia-1500x1500-1.jpg" },
+    "p03": { "nombre": "Adidas Adipower Multiweight", "categoria": "Palas", "precio": 320, "stock": 0, "descripcion": "Personaliza tu balance. Edición especial.", "imagen": "https://allforpadel.com/4058-large_default/adidas-adipower-multiweight.jpg" },
+    "p04": { "nombre": "Asics Gel-Padel Pro 5", "categoria": "Calzado", "precio": 75, "stock": 15, "descripcion": "Zapatillas con gran estabilidad y agarre.", "imagen": "https://m.media-amazon.com/images/I/61QJt3bi2JL._AC_UY900_.jpg" },
+    "p05": { "nombre": "Babolat Jet Premura 2", "categoria": "Calzado", "precio": 135, "stock": 8, "descripcion": "La zapatilla 100% pádel más ágil.", "imagen": "https://www.padelnuestro.com/media/catalog/product/1/1/112498_zapatillas_babolat_jet_premura_2_m_30f24752_4122_1500x1500_1_267c.jpg" },
+    "p06": { "nombre": "Camiseta Bullpadel WPT", "categoria": "Ropa", "precio": 35, "stock": 20, "descripcion": "Transpirable y oficial del circuito.", "imagen": "https://www.elpadelmepone.es/10089-large_default/camiseta-bullpadel-wpt-23-logro-blanca.jpg" },
+    "p07": { "nombre": "Pantalón Corto Head", "categoria": "Ropa", "precio": 28, "stock": 12, "descripcion": "Comodidad máxima con bolsillos para pelotas.", "imagen": "https://www.zonadepadel.es/18037-zdp_customer/short-head-performance-azul-marino.jpg" },
+    "p08": { "nombre": "Overgrip Wilson Pro (x3)", "categoria": "Accesorios", "precio": 9, "stock": 50, "descripcion": "Tacto suave y máxima absorción.", "imagen": "https://www.padelreference.com/storage/20245/bNosXD8nn7Bf2hQmJjOOxiuhzmRk7y-metad2lsc29uIHN1cmdyaXAucG5n-.png" },
+    "p09": { "nombre": "Bote Pelotas Head Pro S", "categoria": "Accesorios", "precio": 7, "stock": 100, "descripcion": "La pelota más rápida del circuito.", "imagen": "https://www.zonadepadel.es/20766-large_default/bote-pelotas-head-padel-pro-s.jpg" },
+    "p10": { "nombre": "Paletero Nox Tour Blue", "categoria": "Accesorios", "precio": 55, "stock": 6, "descripcion": "Amplio y con compartimentos térmicos.", "imagen": "https://www.zonadepadel.es/6667-large_default/paletero-thermo-tour-blue-2018.jpg" }
+  }
+}
